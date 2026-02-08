@@ -56,139 +56,139 @@ namespace C_04
 
 
             #region Q2
-            int age = 1;
-            int day = 1;
-            string studentID = "";
-            double totalPrice = 0;
-            try
-            {
-                Console.Write("Enter your age: ");
-                age = Convert.ToInt32(Console.ReadLine());
-                Console.Write("please Enter the Day : ");
-                day = Convert.ToInt32(Console.ReadLine());
-                Console.Write("have you a student ID...?! :  ");
-                studentID = Console.ReadLine().ToLower();
+            // int age = 1;
+            // int day = 1;
+            // string studentID = "";
+            // double totalPrice = 0;
+            // try
+            // {
+            //     Console.Write("Enter your age: ");
+            //     age = Convert.ToInt32(Console.ReadLine());
+            //     Console.Write("please Enter the Day : ");
+            //     day = Convert.ToInt32(Console.ReadLine());
+            //     Console.Write("have you a student ID...?! :  ");
+            //     studentID = Console.ReadLine().ToLower();
 
-            }
-            catch { Console.WriteLine("invalid data"); }
+            // }
+            // catch { Console.WriteLine("invalid data"); }
 
-             if (age < 5)
-            {
-                Console.WriteLine("Total price : 0 EGP\n ticket price : free");
-            }
-           else if (age >= 5 && age <= 12)
-            {
-                if (day == 6 && day == 7)
-                {
-                    if (studentID == "yes") {
+            //  if (age < 5)
+            // {
+            //     Console.WriteLine("Total price : 0 EGP\n ticket price : free");
+            // }
+            //else if (age >= 5 && age <= 12)
+            // {
+            //     if (day == 6 && day == 7)
+            //     {
+            //         if (studentID == "yes") {
 
-                        totalPrice += 40 * .2;
-                        Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP  20% discount (applied after weekend surcharge (10 EGP)) ");
-
-
-                    }
-                    else {
-
-                        totalPrice += 40;
-                        Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP  Add 10 EGP (to any non-free ticket in weekend) ");
-                    }
-
-                }
-
-                else if (studentID == "yes")
-                {
-                    totalPrice += 30 * .2;
-                    Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP  20% discount  ");
-
-                }
+            //             totalPrice += 40 * .2;
+            //             Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP  20% discount (applied after weekend surcharge (10 EGP)) ");
 
 
+            //         }
+            //         else {
 
-                else
-                {
-                    totalPrice += 30;
-                    Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP");
+            //             totalPrice += 40;
+            //             Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP  Add 10 EGP (to any non-free ticket in weekend) ");
+            //         }
+
+            //     }
+
+            //     else if (studentID == "yes")
+            //     {
+            //         totalPrice += 30 * .2;
+            //         Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP  20% discount  ");
+
+            //     }
 
 
 
-                }
+            //     else
+            //     {
+            //         totalPrice += 30;
+            //         Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 30 EGP");
 
 
 
-
-
-
-
-            }
-
-            else if (age >= 13 && age <= 59)
-            {
-
-                if (day == 6 || day == 7)
-                {
-                    if (studentID == "yes")
-                    {
-
-                        totalPrice += 60 * .2;
-                        Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP     20% discount (applied after weekend surcharge (10 EGP) ) ");
-
-
-                    }
-                    else
-                    {
-
-                        totalPrice += 60;
-                        Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP  Add 10 EGP (to any non-free ticket in weekend) ");
-                    }
-
-
-
-                }
-                else if (studentID == "yes")
-                {
-                    totalPrice += 50 * .2;
-                    Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP  20% discount ");
-
-                }
-                else
-                {
-                    totalPrice += 50;
-                    Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP");
-
-
-
-                }
+            //     }
 
 
 
 
 
 
-            }
 
-            else if (age >= 60)
-            {
+            // }
 
+            // else if (age >= 13 && age <= 59)
+            // {
 
-                if (day == 6 || day == 7)
-                {
-                    totalPrice += 35;
-                    Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 25 EGP  Add 10 EGP (to any non-free ticket in weekend) ");
+            //     if (day == 6 || day == 7)
+            //     {
+            //         if (studentID == "yes")
+            //         {
 
-                }
-
-                else
-                {
-                    totalPrice += 25;
-                    Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 25 EGP");
+            //             totalPrice += 60 * .2;
+            //             Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP     20% discount (applied after weekend surcharge (10 EGP) ) ");
 
 
+            //         }
+            //         else
+            //         {
 
-                }
+            //             totalPrice += 60;
+            //             Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP  Add 10 EGP (to any non-free ticket in weekend) ");
+            //         }
 
-            }
 
-           
+
+            //     }
+            //     else if (studentID == "yes")
+            //     {
+            //         totalPrice += 50 * .2;
+            //         Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP  20% discount ");
+
+            //     }
+            //     else
+            //     {
+            //         totalPrice += 50;
+            //         Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 50 EGP");
+
+
+
+            //     }
+
+
+
+
+
+
+            // }
+
+            // else if (age >= 60)
+            // {
+
+
+            //     if (day == 6 || day == 7)
+            //     {
+            //         totalPrice += 35;
+            //         Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 25 EGP  Add 10 EGP (to any non-free ticket in weekend) ");
+
+            //     }
+
+            //     else
+            //     {
+            //         totalPrice += 25;
+            //         Console.WriteLine($"Total price : {totalPrice} EGP\n ticket price : 25 EGP");
+
+
+
+            //     }
+
+            // }
+
+
             #endregion
 
 
@@ -198,6 +198,53 @@ namespace C_04
 
 
 
+
+
+            #region Q3
+            #region switch clasic
+            //string fileExtension = ".pdf";
+            //string fileType;
+
+            //switch (fileExtension)
+            //{
+            //    case ".pdf":
+            //       fileType = "PDF Document";
+            //        break;
+            //    case ".docx":
+            //    case ".doc":
+            //        fileType = "Word Document";
+            //        break;
+            //        case ".xlsx":
+            //        case ".xls":
+            //        fileType = "Excel Spreadsheet";
+            //        break;  
+            //     case ".jpg":
+            //    case ".png":
+            //    case ".gif":
+            //        fileType = "Image File";
+            //        break;
+            //        default:
+            //        fileType = "Unknown File Type";
+            //        break;
+            //}
+
+            #endregion
+
+            #region switch expression 
+            //string fileExtension = ".pdf";
+            //string fileType;
+
+            //fileType = fileExtension switch
+            //{
+            //    ".pdf" => "PDF Document",
+            //    ".docx" or ".doc" => "Word Document",
+            //    ".xlsx" or ".xls" => "Excel Spreadsheet",
+            //    ".jpg" or ".png" or ".gif" => "Image File",
+            //    _ => "Unknown File Type"
+            //};
+
+            #endregion
+            #endregion
 
 
         }
