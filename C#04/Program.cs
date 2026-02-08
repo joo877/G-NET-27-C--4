@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace C_04
 {
@@ -259,88 +260,167 @@ namespace C_04
 
             #region Q5
 
-            int counter = 0;
-            bool isvalid;
-            do
-            {
-                isvalid = true;
-                counter++;
-                
-                Console.Write("please Enter your password : ");
-                
-                string password = Console.ReadLine();
-                bool hasupper = false;
-                bool hasdigit = false;
-                bool hasspace = false;
-                foreach (char c in password)
-                {
-                    if (char.IsUpper(c))
+            //int counter = 0;
+            //bool isvalid;
+            //do
+            //{
+            //    isvalid = true;
+            //    counter++;
 
-                        hasupper = true;
+            //    Console.Write("please Enter your password : ");
 
-                    if (char.IsDigit(c))
+            //    string password = Console.ReadLine();
+            //    bool hasupper = false;
+            //    bool hasdigit = false;
+            //    bool hasspace = false;
+            //    foreach (char c in password)
+            //    {
+            //        if (char.IsUpper(c))
 
-                        hasdigit = true;
+            //            hasupper = true;
 
-                    if (char.IsWhiteSpace(c))
+            //        if (char.IsDigit(c))
 
-                        hasspace = true;
-                }
+            //            hasdigit = true;
 
+            //        if (char.IsWhiteSpace(c))
 
-                if (password.Length < 8)
-                {
-                    Console.ForegroundColor= ConsoleColor.Red;
-                    Console.WriteLine("password must be Minimum 8 characters");
-                    Console.ResetColor();
-                    isvalid = false;
-                }
-                if (!hasupper)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("password must contain at least one uppercase letter");
-                    Console.ResetColor();
-                    isvalid = false;
-                }
-                if (!hasdigit)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("password must contain at least one digit");
-                    Console.ResetColor();
-                    isvalid = false;
-                }
-                if (hasspace)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("password must not contain spaces");
-                    Console.ResetColor();
-                    isvalid = false;
-                }
-
-                if (isvalid)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Password accepted!");
-                    Console.ResetColor();
-                    return;
-                }
-
-                Console.WriteLine($"maxmum allow 5 Attempts ... Remaining attempts : {5 - counter}\n");
+            //            hasspace = true;
+            //    }
 
 
+            //    if (password.Length < 8)
+            //    {
+            //        Console.ForegroundColor= ConsoleColor.Red;
+            //        Console.WriteLine("password must be Minimum 8 characters");
+            //        Console.ResetColor();
+            //        isvalid = false;
+            //    }
+            //    if (!hasupper)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //        Console.WriteLine("password must contain at least one uppercase letter");
+            //        Console.ResetColor();
+            //        isvalid = false;
+            //    }
+            //    if (!hasdigit)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //        Console.WriteLine("password must contain at least one digit");
+            //        Console.ResetColor();
+            //        isvalid = false;
+            //    }
+            //    if (hasspace)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //        Console.WriteLine("password must not contain spaces");
+            //        Console.ResetColor();
+            //        isvalid = false;
+            //    }
+
+            //    if (isvalid)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Green;
+            //        Console.WriteLine("Password accepted!");
+            //        Console.ResetColor();
+            //        return;
+            //    }
+
+            //    Console.WriteLine($"maxmum allow 5 Attempts ... Remaining attempts : {5 - counter}\n");
 
 
 
 
 
-            } while (counter < 5);
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Account locked");
-            Console.ResetColor();
+
+
+            //} while (counter < 5);
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine("Account locked");
+            //Console.ResetColor();
 
             #endregion
 
 
+
+            #region Q6
+            //int[] scores = { 85, 42, 91, 67, 55, 78, 39, 88, 72, 95, 60, 48 };
+            //int sum = 0;
+            //int A = 0;
+            //int B = 0;
+            //int C = 0;
+            //int D = 0;
+            //int F = 0;
+            //int count = 0;
+
+            //double average = 0;
+            //for (int i = 0; i < scores.Length; i++)
+            //{
+            //    if (scores[i] < 50)
+            //    {
+            //        Console.WriteLine($"failing scores : {i}  ");
+            //    }
+            //    else if (scores[i] > 90)
+            //    {
+            //        Console.WriteLine($"First score above 90 :  {scores[i]}  ");
+            //        break;
+            //    }
+            //    else if (!(scores[i] < 40))
+            //    {
+            //        sum += scores[i];
+            //        count++;
+            //        average = (double)sum / count;
+            //    }
+            //}
+
+
+            //for (int i = 0; i < scores.Length; i++)
+            //{
+
+            //    if (scores[i] >= 90 && scores[i] <= 100)
+            //    {
+            //        A++;
+
+
+            //    }
+            //    else if (scores[i] >= 80 && scores[i] <= 89)
+            //    {
+            //        B++;
+
+
+            //    }
+            //    else if (scores[i] >= 70 && scores[i] <= 79)
+            //    {
+            //        C++;
+
+
+            //    }
+            //    else if (scores[i] >= 60 && scores[i] <= 69)
+            //    {
+            //        D++;
+
+
+            //    }
+            //    else
+            //    {
+            //        F++;
+
+            //    }
+            //}
+
+
+
+            //Console.WriteLine($"avarage of score : {average}");
+            //Console.WriteLine($"number of student has grade A : {A}");
+            //Console.WriteLine($"number of student has grade B : {B}");
+            //Console.WriteLine($"number of student has grade C : {C}");
+            //Console.WriteLine($"number of student has grade D : {D}");
+            //Console.WriteLine($"number of student has grade F : {F}");
+
+
+
+
+            #endregion
 
 
 
