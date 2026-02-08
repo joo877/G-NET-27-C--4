@@ -250,19 +250,101 @@ namespace C_04
             #region Q4
             //int temperature = 35;
             //string weatherAdvice = temperature < 0 ? "Freezing! Stay indoors." : temperature < 15 ? "Cold. Wear a jacket." :temperature < 25 ? "Pleasant weather" : temperature< 35 ? "Warm. Stay hydrated." : "Hot! Avoid sun exposure.";
-            
+
             /*
              not recommended ternary operator (avoid used nested ternary operator) for more than two conditions because it reduces code readability.
             better to use if-else or switch statements for complex conditions.
              */
             #endregion
 
+            #region Q5
+
+            int counter = 0;
+            bool isvalid;
+            do
+            {
+                isvalid = true;
+                counter++;
+                
+                Console.Write("please Enter your password : ");
+                
+                string password = Console.ReadLine();
+                bool hasupper = false;
+                bool hasdigit = false;
+                bool hasspace = false;
+                foreach (char c in password)
+                {
+                    if (char.IsUpper(c))
+
+                        hasupper = true;
+
+                    if (char.IsDigit(c))
+
+                        hasdigit = true;
+
+                    if (char.IsWhiteSpace(c))
+
+                        hasspace = true;
+                }
+
+
+                if (password.Length < 8)
+                {
+                    Console.ForegroundColor= ConsoleColor.Red;
+                    Console.WriteLine("password must be Minimum 8 characters");
+                    Console.ResetColor();
+                    isvalid = false;
+                }
+                if (!hasupper)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("password must contain at least one uppercase letter");
+                    Console.ResetColor();
+                    isvalid = false;
+                }
+                if (!hasdigit)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("password must contain at least one digit");
+                    Console.ResetColor();
+                    isvalid = false;
+                }
+                if (hasspace)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("password must not contain spaces");
+                    Console.ResetColor();
+                    isvalid = false;
+                }
+
+                if (isvalid)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Password accepted!");
+                    Console.ResetColor();
+                    return;
+                }
+
+                Console.WriteLine($"maxmum allow 5 Attempts ... Remaining attempts : {5 - counter}\n");
+
+
+
+
+
+
+
+            } while (counter < 5);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Account locked");
+            Console.ResetColor();
+
+            #endregion
+
+
+
+
+
         }
-
-
-
-
-
     }
-    }
+}
 
