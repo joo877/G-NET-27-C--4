@@ -247,6 +247,16 @@ namespace C_04
             #endregion
 
 
+            #region Q4
+            //int temperature = 35;
+            //string weatherAdvice = temperature < 0 ? "Freezing! Stay indoors." : temperature < 15 ? "Cold. Wear a jacket." :temperature < 25 ? "Pleasant weather" : temperature< 35 ? "Warm. Stay hydrated." : "Hot! Avoid sun exposure.";
+            
+            /*
+             not recommended ternary operator (avoid used nested ternary operator) for more than two conditions because it reduces code readability.
+            better to use if-else or switch statements for complex conditions.
+             */
+            #endregion
+
         }
 
 
